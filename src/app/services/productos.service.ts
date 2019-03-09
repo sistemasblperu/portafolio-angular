@@ -25,7 +25,8 @@ export class ProductosService {
 
     return new Promise(  ( resolve, reject ) => {
 
-      this.http.get('https://angular-html-25cf9.firebaseio.com/productos_idx.json')
+      this.http.get('https://angular-html-66b04.firebaseio.com/productos_idx.json')
+      
           .subscribe( (resp: Producto[]) => {
             this.productos = resp;
             this.cargando = false;
@@ -38,7 +39,7 @@ export class ProductosService {
 
   getProducto( id: string ) {
 
-    return this.http.get(`https://angular-html-25cf9.firebaseio.com/productos/${ id }.json`);
+    return this.http.get(`https://angular-html-66b04.firebaseio.com/productos/${ id }.json`);
 
   }
 
